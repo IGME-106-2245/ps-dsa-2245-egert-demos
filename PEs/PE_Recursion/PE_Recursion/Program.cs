@@ -9,6 +9,9 @@
             int[] nums = new int[NumElements];
             int[] numsReverse = new int[NumElements];
             int[] numsRandom = new int[NumElements];
+            int[] numSingular = new int[1];
+            numSingular[0] = 10;
+
             Random rng = new Random();
             string word;
 
@@ -47,6 +50,7 @@
             Console.WriteLine($"Contains 3 in nums: {Contains(nums, 3)}");
             Console.WriteLine($"Contains 3 in numsReverse: {Contains(numsReverse, 3)}");
             Console.WriteLine($"Contains 3 in numsRandom: {Contains(numsRandom, 3)}");
+            Console.WriteLine($"Contains 5 in numSingular: {Contains(numSingular, 5)}");
             Console.WriteLine();
 
             // Find if the number 42 is in each array
