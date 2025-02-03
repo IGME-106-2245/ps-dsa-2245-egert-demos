@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IterfaceDemo", "IterfaceDemo\IterfaceDemo.csproj", "{7616B82B-189A-4C94-B1EC-85FFB2581732}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7616B82B-189A-4C94-B1EC-85FFB2581732}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7616B82B-189A-4C94-B1EC-85FFB2581732}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7616B82B-189A-4C94-B1EC-85FFB2581732}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7616B82B-189A-4C94-B1EC-85FFB2581732}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3166E8C8-94E6-42F7-9151-E2F71711FC0E}
+	EndGlobalSection
+EndGlobal
