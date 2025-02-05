@@ -16,11 +16,32 @@ namespace ListDemo
 
         // Create the indexer for the MyStringList Class
 
+        // Gets or sets the data at index i
         public String this[int i]
         {
-            get { return data[i]; }
-            set { data[i] = value; }
+            get
+            {
+                // Ensure the index is valid
+                if (i < 0 || i >= Count)
+                {
+                    throw new IndexOutOfRangeException(
+                      "Your get index is bad");
+                }
+                return data[i];
+            }
+
+            set
+            {
+                // Ensure the index is valid
+                if (i < 0 || i >= Count)
+                {
+                    throw new IndexOutOfRangeException(
+                      "Your set index is bad");
+                }
+                data[i] = value;
+            }
         }
+
 
         public int Count { get; private set; }
 
