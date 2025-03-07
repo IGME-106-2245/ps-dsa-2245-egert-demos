@@ -2,15 +2,13 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace MG_First_Program
+namespace MonoGame_Demo
 {
     public class Game1 : Game
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
-        private Texture2D myDog;
-
-        private Rectangle dogPosition;
+        private Texture2D ducky;
 
         public Game1()
         {
@@ -24,20 +22,19 @@ namespace MG_First_Program
             // TODO: Add your initialization logic here
 
             base.Initialize();
+
+            // NOTE: Using System.Diagnostics.Debug.WriteLine puts the output 
+            // in the Debug window since we don't have a console!
+            System.Diagnostics.Debug.WriteLine("Hello GDAPS2!");
+
         }
 
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-            // System.Diagnostics.Debug.WriteLine("Hello GDAPS2!");
-
 
             // TODO: use this.Content to load your game content here
-
-            myDog = Content.Load<Texture2D>("dog");
-            System.Diagnostics.Debug.WriteLine("dog width: " + myDog.Width);
-            System.Diagnostics.Debug.WriteLine("dog height: " + myDog.Height);
-            dogPosition = new Rectangle(0, 100, myDog.Width / 4, myDog.Height / 4);
+            ducky = Content.Load<Texture2D>("ducky");
         }
 
         protected override void Update(GameTime gameTime)
@@ -46,24 +43,35 @@ namespace MG_First_Program
                 Exit();
 
             // TODO: Add your update logic here
-            //System.Diagnostics.Debug.WriteLine("Hello GDAPS2!");
-
-            dogPosition.X++;
 
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.PaleVioletRed);
+            GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
             _spriteBatch.Begin();
-             _spriteBatch.Draw(myDog, dogPosition, Color.Blue);
-            _spriteBatch.Draw(myDog, new Vector2(0, 0), Color.White);
+
+            // Regular size
+            // Positioned at (20, 20) 
+            // No color overlay
+            _spriteBatch.Draw(ducky,
+                             new Vector2(20, 20),
+                             Color.White);
+
+            // Resized to 100 x 100 - must use Rectangle overload
+            // Positioned at (500, 300)
+            // Red color overlay
+            _spriteBatch.Draw(ducky,
+                             new Rectangle(500, 300, 100, 100),
+                             Color.Yellow);
+
             _spriteBatch.End();
 
             base.Draw(gameTime);
         }
+
     }
 }
